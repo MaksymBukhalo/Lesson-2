@@ -4,17 +4,10 @@ using UnityEngine;
 
 public class MoveDot : MonoBehaviour
 {
-    public Vector3 EndPosition;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Vector3 endPosition;
 
-    // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, EndPosition, Time.deltaTime);
-        
+        transform.position = Vector3.MoveTowards(transform.position, endPosition, Time.deltaTime);
     }
 }

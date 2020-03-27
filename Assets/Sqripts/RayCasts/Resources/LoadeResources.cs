@@ -5,6 +5,7 @@ using UnityEngine;
 public class LoadeResources : MonoBehaviour
 {
     Dictionary<string, GameObject> cubeByName;
+
     public void LoadAll()
     {
         cubeByName = new Dictionary<string, GameObject>();

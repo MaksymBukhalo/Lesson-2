@@ -5,7 +5,8 @@ using UnityEngine;
 public class RayDistance : MonoBehaviour
 {
     public float rayDistance = 50f;
-    void Update()
+
+    private void Update()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Debug.DrawRay(transform.position, ray.direction * rayDistance,Color.red);

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 
-public class SpriteLOader 
+public class SpriteLOader
 {
     string spriteDirectiry;
 
@@ -11,6 +11,7 @@ public class SpriteLOader
     {
         spriteDirectiry = Path.Combine(Application.streemingAssetsPath, "images");
     }
+
     public Sprite LoadSqripts(string imageName)
     {
         var path = Path.Combine(spriteDirectiry, imageName);

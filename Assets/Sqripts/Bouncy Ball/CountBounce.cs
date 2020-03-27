@@ -5,23 +5,27 @@ using UnityEngine;
 
 public class CountBounce : MonoBehaviour
 {
-    int CountPlane = 0;
+    
+    public Text countAndDistance;
     public GameObject plane;
-    float Distance = 0f;
-    public Text CountAndDistance;
-    int CountCube = 0;
+
+    private float distance = 0f;
+    private int countPlane = 0;
+    private int countCube = 0;
+
     private void OnCollisionEnter(Collision collision)
     {
-        CountPlane++;
+        countPlane++;
     }
+
     private void OnTriggerExit(Collider other)
     {
-        CountCube++;
+        countCube++;
     }
+
     private void FixedUpdate()
     {
-        Distance = transform.position.y - plane.transform.position.y;
-
-        CountAndDistance.text = "CountPlane " + CountPlane + " CountCube " + CountCube + "\nDistance " + Distance;
+        distance = transform.position.y - plane.transform.position.y;
+        countAndDistance.text = "CountPlane " + countPlane + " CountCube " + countCube + "\nDistance " + distance;
     }
 }

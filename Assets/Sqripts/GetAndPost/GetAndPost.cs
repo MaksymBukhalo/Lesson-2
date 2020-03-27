@@ -6,24 +6,27 @@ using UnityEngine.Networking;
 
 public class GetAndPost : MonoBehaviour
 {
-    public string Json="";
+    public string Json;
 
     public void GetWebsite()
     {
-        StartCoroutine(GetSite());
+        StartCoroutine(IGetSite());
     }
-    IEnumerator GetSite()
+
+    public void PostWebsite()
+    {
+        StartCoroutine(IPostSite());
+    }
+
+    IEnumerator IGetSite()
     {
         UnityWebRequest website = UnityWebRequest.Get("https://postman-echo.com/get?foo1=bar1");
         yield return website.SendWebRequest();
         Json = website.downloadHandler.text;
         Debug.Log(Json);
     }
-    public void PostWebsite()
-    {
-        StartCoroutine(PostSite());
-    }
-    IEnumerator PostSite()
+
+    IEnumerator IPostSite()
     {
         Debug.Log(Json);
         List<IMultipartFormSection> websiteForms = new List<IMultipartFormSection>();

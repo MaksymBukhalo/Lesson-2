@@ -7,15 +7,9 @@ public class MoveCircle : MonoBehaviour
     public float angle = 0; 
     public float radius = 0.5f;
     public float speed = 1f;
-    public bool isCircle = false; 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool isCircle = false;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (isCircle)
         {

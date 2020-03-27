@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class MoveTranslate : MonoBehaviour
 {
-    public Vector3 VectorMove;
+    public Vector3 vectorMove;
     public float speedCapsule;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
-        transform.Translate(VectorMove.normalized * speedCapsule);
+        transform.Translate(vectorMove.normalized * speedCapsule);
     }
 }

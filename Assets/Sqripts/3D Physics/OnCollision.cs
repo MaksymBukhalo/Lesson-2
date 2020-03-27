@@ -8,10 +8,12 @@ public class OnCollision : MonoBehaviour
     {
         Debug.Log("Enter called");
     }
+
     private void OnCollisionStay(Collision collision)
     {
         Debug.Log("Stay occuring...");
     }
+
     private void OnCollisionExit(Collision collision)
     {
         Debug.Log("Exit called...");

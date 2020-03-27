@@ -8,14 +8,8 @@ public class CubeRotate : MonoBehaviour
     public int rotateX = 0;
     public int rotateY = 0;
     public int rotateZ = 0;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-    // Update is called once per frame
-   
-    void Update()
+
+    private void Update()
     {
         Vector3 rotatePosihn = new Vector3(rotateX, rotateY, rotateZ);
         float angle = rotateSpeed * Time.deltaTime;

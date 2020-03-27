@@ -4,18 +4,11 @@ using UnityEngine;
 
 public class MoveForce : MonoBehaviour
 {
-    public Vector3 VectorMove;
+    public Vector3 vectorMove;
     public float forseCapsule;
-    public Rigidbody body;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
-        body.AddForce(VectorMove.normalized * forseCapsule);
+        GetComponent<Rigidbody>().AddForce(vectorMove.normalized * forseCapsule);
     }
 }

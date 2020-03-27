@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SavePrefs : MonoBehaviour
 {
-    void Start()
+    private void Start()
     {
         PlayerPrefs.SetInt("NumInt", 23);
         PlayerPrefs.SetFloat("NumFloat", 124f);
@@ -12,10 +12,5 @@ public class SavePrefs : MonoBehaviour
 
         PlayerPrefs.Save();
         Debug.Log("Save");
-    }
-
-    void Update()
-    {
-        
     }
 }

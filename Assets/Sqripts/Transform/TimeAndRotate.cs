@@ -5,20 +5,21 @@ using UnityEngine.UI;
 
 public class TimeAndRotate : MonoBehaviour
 {
-    float GameSeconds = 0f;
-    float GameMinutes = 0f;
+    public Text textTimeAndRotate;
 
-    public Text TextTimeAndRotate;
-    void Update()
+    private float gameSeconds = 0f;
+    private float gameMinutes = 0f;
+
+    private void Update()
     {
-        GameSeconds = GameSeconds + Time.deltaTime;
+        gameSeconds = gameSeconds + Time.deltaTime;
 
-        TextTimeAndRotate.text = "Time " + GameMinutes + ":" + GameSeconds;
+        textTimeAndRotate.text = "Time " + gameMinutes + ":" + gameSeconds;
         
-        if(GameSeconds >=60)
+        if(gameSeconds >=60)
         {
-            GameMinutes += 1;
-            GameSeconds = 0;
+            gameMinutes += 1;
+            gameSeconds = 0;
         }       
     }
 }

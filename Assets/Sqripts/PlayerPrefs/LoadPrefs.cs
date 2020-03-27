@@ -6,9 +6,9 @@ public class LoadPrefs : MonoBehaviour
 {
     public int intNum = 0;
     public float floatNum= 0f;
-    public string Name = "";
+    public string nameString = "";
 
-    void Update()
+    private void Update()
     {
         if(Input.GetKeyDown(KeyCode.K))
         {
@@ -16,14 +16,14 @@ public class LoadPrefs : MonoBehaviour
             {
                 intNum = PlayerPrefs.GetInt("NumInt");
                 floatNum = PlayerPrefs.GetFloat("NumFloat");
-                Name = PlayerPrefs.GetString("NumString");
+                nameString = PlayerPrefs.GetString("NumString");
                 Debug.Log("Load");
             }
             else
             {
                 intNum = 0;
                 floatNum = 0f;
-                Name = "";
+                nameString = "";
             }
         }
         if (Input.GetKeyDown(KeyCode.L))
@@ -31,8 +31,6 @@ public class LoadPrefs : MonoBehaviour
             PlayerPrefs.DeleteAll();
             PlayerPrefs.Save();
             Debug.Log("Delete");
-        }
-
-        
+        }   
     }
 }

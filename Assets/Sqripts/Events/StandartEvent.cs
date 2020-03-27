@@ -5,20 +5,21 @@ using System;
 
 public class StandartEvent : MonoBehaviour
 {
-    public event Action standartEvent = delegate { };
+    public event Action StandartEvents = delegate { };
 
     public void MouseDown()
     {
-        standartEvent += ConsoleHi;
-        standartEvent.Invoke();
-        standartEvent -= ConsoleHi;
+        StandartEvents += ConsoleHi;
+        StandartEvents.Invoke();
+        StandartEvents -= ConsoleHi;
     }
+
     public void MouseDown2()
     {
-        standartEvent += ConsoleHi;
-        standartEvent.Invoke();
-        standartEvent += ConsoleHi;
-        standartEvent.Invoke();
+        StandartEvents += ConsoleHi;
+        StandartEvents.Invoke();
+        StandartEvents += ConsoleHi;
+        StandartEvents.Invoke();
     }
 
     public void ConsoleHi()

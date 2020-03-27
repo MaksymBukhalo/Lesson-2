@@ -5,6 +5,7 @@ using UnityEngine;
 public class OnTriger : MonoBehaviour
 {
     public float hoverForse = 20f;
+
     private void OnTriggerStay(Collider other)
     {
         Debug.Log("Stay");

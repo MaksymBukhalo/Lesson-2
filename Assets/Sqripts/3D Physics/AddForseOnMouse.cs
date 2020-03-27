@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class AddForseOnMouse : MonoBehaviour
 {
-    void OnMouseDown()
+    private void OnMouseDown()
     {
-        Rigidbody body = GetComponent<Rigidbody>();
-        body.AddForce(transform.forward * 100,ForceMode.VelocityChange);
-        body.useGravity = true;
+        GetComponent<Rigidbody>().AddForce(transform.forward * 100,ForceMode.VelocityChange);
+        GetComponent<Rigidbody>().useGravity = true;
     }
 }
